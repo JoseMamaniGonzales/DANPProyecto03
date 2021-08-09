@@ -14,8 +14,12 @@ public class MainActivity extends Activity{
 
     }
 
-    public void pasar(View view){
+    public void pasarCamara(View view){
         Intent intent = new Intent(this, Camara.class);
+        startActivity(intent);
+    }
+    public void pasarGrabacion(View view){
+        Intent intent = new Intent(this, Grabacion.class);
         startActivity(intent);
     }
 }

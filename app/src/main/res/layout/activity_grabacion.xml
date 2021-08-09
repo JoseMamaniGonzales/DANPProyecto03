@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- INICIO DE COMPONENTE AUDIO -->
+    <LinearLayout
+        android:id="@+id/editor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txt_new_sound"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:background="@color/pink"
+            android:text="audio1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white" />
+
+        <Spinner
+            android:id="@+id/select_sounds"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:popupBackground="@color/purple_200"
+            android:background="@color/purple_200" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editor"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bordes_redondos_azul"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_StartRecord"
+                android:textColor="@color/white"
+                android:text="Grabar sonido"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_StartRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/player_record_1084"
+                    android:text="Iniciar"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:textAlignment="center" />
+
+                <ImageButton
+                    android:id="@+id/btn_StopRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/player_stop_1081"
+                    android:text="STOP"
+                    android:textAlignment="center"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_play"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:text="Escuchar sonido"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                tools:ignore="ObsoleteLayoutParam" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/player_game_1085"
+                    android:text="iniciar"
+                    android:textAlignment="center"/>
+
+                <ImageButton
+                    android:id="@+id/btn_stop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/player_stop_1081"
+                    android:text="STOP"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- FIN DE COMPONENTE AUDIO -->
+
+
+</RelativeLayout>
